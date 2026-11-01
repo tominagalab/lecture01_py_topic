@@ -22,9 +22,12 @@ setup(
             'pytest',
         ],
     },
+    # console_scriptsに登録すると、ros2 runから実行できるコマンドを作成できます。
     entry_points={
         'console_scripts': [
+            # 「ros2 run py_topic talker」でpy_talker.pyのmain関数を実行します。
             'talker=py_topic.py_talker:main',
+            # 「ros2 run py_topic listener」でpy_listener.pyのmain関数を実行します。
             'listener=py_topic.py_listener:main'
         ],
     },
